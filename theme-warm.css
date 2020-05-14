@@ -1,0 +1,63 @@
+/* LIGHT THEME COLORS */
+
+body {
+  background-color: #FFEDDD;
+  color: #F55550;
+  font-weight: 400;
+}
+
+h1 {
+  color: #6070BB;
+}
+
+a, a:visited, a:active, a:hover {
+  color: #6070BB;
+}
+
+table, th, td {
+  border-color: #FFD0BB;
+}
+
+caption {
+  color: #FFEDDD;
+  background: #FFD0BB;
+}
+
+caption a, caption a:hover {
+  color: #6070BB;
+}
+
+caption .month .prev svg, caption .month .next svg {
+  fill: #6070BB;
+}
+
+caption .year .prev svg, caption .year .next svg {
+  fill: #FFEDDD;
+}
+
+td.full, td.new {
+  background-color: #FFD0BB;
+}
+
+td.today {
+  color: #BBD0FF;
+  background-color: #6070BB;
+}
+
+.table thead th {
+  color: #6070BB;
+  border-color: #FFD0BB;
+}
+
+.tooltip-inner {
+  color: #F55550;
+  background: #FFD0BB;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #FFD0BB;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #FFD0BB;
+}

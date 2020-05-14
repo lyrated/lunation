@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+    <title>Lunation.glitch | Simplified moon phases calendar</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/style.css" />
+    <link id="theme" rel="stylesheet" href="/theme-dark.css" />
+
+    <script src="/script.js" defer></script>
+    <script src="/change-theme.js" defer></script>
+  </head>
+
+  <body>
+    <header class="py-md-3">
+      <a href="/">
+        <img src="https://cdn.glitch.com/e3f08c41-d9c5-46da-95b8-60d91e4499eb%2Flogo_light.png?v=1589275742566" />
+      </a>
+      <h1>Moon phases calendar</h1>
+    </header>
+
+    <main class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9 col-xl-7">
+          <div class="text-right">
+            <span class="pick" id="dark" title="change to dark theme" data-toggle="tooltip"></span>
+            <span class="pick" id="light" title="change to light theme" data-toggle="tooltip"></span>
+            <span class="pick" id="warm" title="change to warm theme" data-toggle="tooltip"></span>
+          </div>
+          <!-- Calendar -->
+          <div id="moon-calendar" class="table-responsive">
+            <table class="table">
+              
+              <caption>
+                <div class="month">
+                  <span class="prev float-left px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 16" width="6" height="16"><path fill-rule="evenodd" d="M6 2L0 8l6 6V2z"></path></svg>
+                  </span>
+                  <a class="date" data-toggle="collapse" href="#year" role="button" aria-expanded="false" aria-controls="pickYear"></a>
+                  <span class="next float-right px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 16" width="6" height="16"><path fill-rule="evenodd" d="M0 14l6-6-6-6v12z"></path></svg>
+                  </span>
+                </div>
+                
+                <div class="year collapse" id="year">
+                  <span class="prev float-left px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 16" width="6" height="16"><path fill-rule="evenodd" d="M6 2L0 8l6 6V2z"></path></svg>
+                  </span>
+                  <span class="date"></span>
+                  <span class="next float-right px-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 16" width="6" height="16"><path fill-rule="evenodd" d="M0 14l6-6-6-6v12z"></path></svg>
+                  </span>
+                </div>
+              </caption>
+              
+              <thead>
+                <tr>
+                  <th>Sun</th>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                </tr>
+              </thead>
+              <tbody id="calendar-body">
+              </tbody>
+            </table>
+          </div>
+          <!-- End calendar -->
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Made by <a href="https://twitter.com/lxynh" target="_blank">m.ly</a>.
+        Disclaimer: The phases can be off +/- 1 day as the calculations were simplified.
+        <a href="https://glitch.com/edit?utm_source=button&utm_medium=button&utm_campaign=glitchButton&utm_content=lunation/#!/remix/lunation"
+           target="_blank" class="d-inline d-md-none">Remix on Glitch</a>
+      </p>
+      <div class="glitchButton position-y-top d-none d-md-inline-block"
+        style="position:absolute; bottom:10px; right:0;"></div>
+      <script src="https://button.glitch.me/button.js" defer></script>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous">
+    </script>
+  </body>
+</html>

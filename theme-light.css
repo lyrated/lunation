@@ -1,0 +1,62 @@
+/* LIGHT THEME COLORS */
+
+body {
+  background-color: #E7EEFE;
+  color: #031030;
+}
+
+h1 {
+  color: #F55550;
+}
+
+a, a:visited, a:active, a:hover {
+  color: #F55550;
+}
+
+table, th, td {
+  border-color: #BBD0FF;
+}
+
+caption {
+  color: #FFD0BB;
+  background: #BBD0FF;
+}
+
+caption a, caption a:hover {
+  color: #203060;
+}
+
+caption .month .prev svg, caption .month .next svg {
+  fill: #203060;
+}
+
+caption .year .prev svg, caption .year .next svg {
+  fill: #FFD0BB;
+}
+
+td.full, td.new {
+  background-color: #BBD0FF;
+}
+
+td.today {
+  color: #BBD0FF;
+  background-color: #203060;
+}
+
+.table thead th {
+  color: #F55550;
+  border-color: #BBD0FF;
+}
+
+.tooltip-inner {
+  color: #031030;
+  background: #BBD0FF;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #BBD0FF;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #BBD0FF;
+}

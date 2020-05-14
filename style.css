@@ -1,0 +1,181 @@
+/* 
+ * Lunation page css
+ */
+
+body {
+  font-weight: 300;
+  overflow-x: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+  transition: background-color 2s;
+}
+
+h1 {
+  font-family: Bodoni MT, Georgia, Cambria, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+a, a:visited, a:active, a:hover {
+  font-weight: 400;
+  transition: all .25s ease-in-out;
+}
+
+a:hover {
+  filter: brightness(75%);
+  text-decoration: none;
+}
+
+/* CONTENT */
+
+header img {
+  max-width: 100%;
+  max-height: 125px;
+  display: block;
+  margin: 0 auto -1.5rem auto;
+}
+
+main {
+  min-height: calc(100% - 170px - 3rem);
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  max-height: 3rem;
+  text-align: center;
+}
+
+footer p {
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+/* CHANGE THEME BUTTONS */
+
+.pick {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #203060;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+  cursor: pointer;
+}
+
+.pick#dark {
+  background-color: #031030;
+}
+
+.pick#light {
+  background-color: #BBD0FF;
+}
+
+.pick#warm {
+  background-color: #FFDDD0;
+}
+
+/* CALENDAR */
+
+table {
+  table-layout: fixed;
+}
+
+table, th, td {
+  border: 1px solid #BBD0FF;
+}
+
+caption {
+  caption-side: top;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.prev, .next {
+  cursor: pointer;
+}
+
+caption .date {
+  text-transform: uppercase;
+}
+
+td {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+td.today {
+  font-weight: 700;
+}
+
+td .moon {
+  margin-top: 0.25rem;
+}
+
+td .moon img {
+  cursor: help;
+  max-height: 25px;
+}
+
+/* Overwrite Bootstrap */
+
+.table td, .table th {
+  padding: 0.5rem;
+}
+
+.table thead th {
+  text-align: center;
+  width: 14%;
+}
+
+.tooltip-inner {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+
+/* GLITCH BUTTON */
+
+.glitchButtonElement img {
+    margin-right: -1rem;
+    max-height: 20px;
+}
+
+.glitchButton .glitchButtonElement {
+  background: none !important;
+  padding: 0 0.25rem 0 0 !important;
+}
+
+.glitchOpenWindowElement {
+  background-color: #FFDDD0;
+}
+
+.glitchOpenWindowElement img {
+  display: none;
+}
+
+.glitchButton .project .projectInfo,
+.glitchButton .project .projectActions {
+  padding: 10px 15px !important;
+}
+
+.glitchButton .project .description {
+  font-size: 12px !important;
+  color: #1D2D5D;
+  margin: 0;
+}
+
+.glitchButton .buttonLinks {
+  border: none !important;
+  color: #1D2D5D !important;
+  margin: 0 !important;
+}
