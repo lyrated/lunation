@@ -1,0 +1,62 @@
+/* DARK THEME COLORS */
+
+body {
+  background-color: #031030;
+  color: #BBD0FF;
+}
+
+h1 {
+  color: #C44440;
+}
+
+a, a:visited, a:active, a:hover {
+  color: #FFDDD0;
+}
+
+table, th, td {
+  border-color: #203060;
+}
+
+caption {
+  color: #FFDDD0;
+  background: #203060;
+}
+
+caption a, caption a:hover {
+  color: #C44440;
+}
+
+caption .month .prev svg, caption .month .next svg {
+  fill: #C44440;
+}
+
+caption .year .prev svg, caption .year .next svg {
+  fill: #FFDDD0;
+}
+
+td.full, td.new {
+  background-color: #203060;
+}
+
+td.today {
+  color: #FFDDD0;
+  background-color: #C44440;
+}
+
+.table thead th {
+  color: #FFDDD0;
+  border-color: #203060;
+}
+
+.tooltip-inner {
+  color: #BBD0FF;
+  background: #203060;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #203060;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #203060;
+}
