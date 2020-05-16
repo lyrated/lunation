@@ -3,12 +3,12 @@
  */
 
 // initialize today's calendar
-var today = new Date();
-var thisMonth = today.getMonth();
-var thisYear = today.getFullYear();
+let today = new Date();
+let thisMonth = today.getMonth();
+let thisYear = today.getFullYear();
 
 // define month names and their total days
-var months = {
+const months = {
   Jan: 31,
   Feb: 28,
   Mar: 31,
@@ -23,8 +23,8 @@ var months = {
   Dec: 31
 };
 
-var monthsNames = Object.keys(months);
-var monthsDays = Object.values(months);
+const monthsNames = Object.keys(months);
+let monthsDays = Object.values(months);
 
 // calculate moon phase - credits: https://gist.github.com/miklb/ed145757971096565723
 function calculatePhase(year, month, day) {
@@ -37,9 +37,20 @@ function calculatePhase(year, month, day) {
   return phase;
 }
 
-// moon images (new moon picture varies in change-theme.js)
+// moon images (new moon picture varies)
+const newmoon = {
+  dark: "https://cdn.glitch.com/e3f08c41-d9c5-46da-95b8-60d91e4499eb%2F00_New_moon_light.png?v=1589406891557",
+  light: "https://cdn.glitch.com/e3f08c41-d9c5-46da-95b8-60d91e4499eb%2F00_New_moon_dark.png?v=1589406891618",
+  warm: "https://cdn.glitch.com/e3f08c41-d9c5-46da-95b8-60d91e4499eb%2F00_New_moon_warm.png?v=1589406891584"
+};
+
+var getTheme = function() {
+  let theme = $("head link#theme").attr("href");
+  return theme.substring(7, theme.length-4);
+}
+
 var src = [
-  "https://cdn.glitch.com/e3f08c41-d9c5-46da-95b8-60d91e4499eb%2F00_New_moon_light.png?v=1589406891557",
+  newmoon[getTheme()],
   "https://cdn.glitch.com/e3f08c41-d9c5-46da-95b8-60d91e4499eb%2F01_Waxing_crescent_moon.png?v=1589406891699",
   "https://cdn.glitch.com/e3f08c41-d9c5-46da-95b8-60d91e4499eb%2F02_First_quarter.png?v=1589406891828",
   "https://cdn.glitch.com/e3f08c41-d9c5-46da-95b8-60d91e4499eb%2F03_Waxing_gibbous.png?v=1589407775391",
@@ -50,7 +61,7 @@ var src = [
 ];
 
 // phase names
-var names = [
+const names = [
   "New moon", "Waxing crescent", "First quarter", "Waxing gibbous",
   "Full moon", "Waning gibbous", "Last quarter", "Waning crescent"
 ];
@@ -119,6 +130,8 @@ function insertCalendar(month, year) {
       insertImage(cell, 6);
     }
     if (phases[day] > 7) {
+      // switch moon pictures according to theme
+      src[0] = newmoon[getTheme()];
       cell.parent().addClass("new");
       insertImage(cell, 0);
     }

@@ -3,7 +3,7 @@ Lunation
 
 A one page calendar website showing the different phases of the moon. The calculations were simplified so it is not 100% correct, but was made just for fun!
 
-The default theme is "dark", but there's also a "light" and "warm" theme to choose - just click on the colored circles.
+The default theme is "light", but there's also a "dark" and "warm" theme to choose - just click on the colored circles.
 
 To view different calendar months, navigate with the arrows in the caption. Click on the month name to toggle the navigation for the year.
 
